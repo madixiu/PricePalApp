@@ -1,10 +1,11 @@
-import { Text, View,StyleSheet } from 'react-native'
+import { View,StyleSheet } from 'react-native'
 import React from 'react'
+import AssetItem from '../components/Crypto/AssetItem'
 
 const Assets = () => {
   return (
     <View style={styles.container}>
-      <Text>Assets</Text>
+      <AssetItem />
     </View>
   )
 }
