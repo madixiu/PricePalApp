@@ -3,13 +3,12 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight,
-  Image,
+  Image
 } from "react-native";
 import React from "react";
 import { priceOptimizer } from "../misc/numberOptimizer";
 
 const AssetItem = (props) => {
-  console.log(props);
   return (
     <TouchableHighlight
       activeopacity={0.6}
