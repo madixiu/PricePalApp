@@ -1,0 +1,170 @@
+[
+  {
+    "Code": "USD",
+    "Currency": "US Dollar",
+    "Sell": "55550",
+    "Buy": "55450"
+  },
+  {
+    "Code": "EUR",
+    "Currency": "Euro",
+    "Sell": "59900",
+    "Buy": "59800"
+  },
+  {
+    "Code": "GBP",
+    "Currency": "British Pound",
+    "Sell": "70200",
+    "Buy": "70000"
+  },
+  {
+    "Code": "CHF",
+    "Currency": "Swiss Franc",
+    "Sell": "63500",
+    "Buy": "63400"
+  },
+  {
+    "Code": "CAD",
+    "Currency": "Canadian Dollar",
+    "Sell": "41250",
+    "Buy": "41150"
+  },
+  {
+    "Code": "AUD",
+    "Currency": "Australian Dollar",
+    "Sell": "36200",
+    "Buy": "36100"
+  },
+  {
+    "Code": "SEK",
+    "Currency": "Swedish Krona",
+    "Sell": "5310",
+    "Buy": "5295"
+  },
+  {
+    "Code": "NOK",
+    "Currency": "Norwegian Krone",
+    "Sell": "5260",
+    "Buy": "5245"
+  },
+  {
+    "Code": "RUB",
+    "Currency": "Russian Ruble",
+    "Sell": "610",
+    "Buy": "605"
+  },
+  {
+    "Code": "THB",
+    "Currency": "Thai Baht",
+    "Sell": "1545",
+    "Buy": "1540"
+  },
+  {
+    "Code": "SGD",
+    "Currency": "Singapore Dollar",
+    "Sell": "41250",
+    "Buy": "41150"
+  },
+  {
+    "Code": "HKD",
+    "Currency": "Hong Kong Dollar",
+    "Sell": "7100",
+    "Buy": "7070"
+  },
+  {
+    "Code": "AZN",
+    "Currency": "Azerbaijani Manat",
+    "Sell": "32050",
+    "Buy": "31950"
+  },
+  {
+    "Code": "AMD",
+    "Currency": "10Armenian Dram",
+    "Sell": "1375",
+    "Buy": "1370"
+  },
+  {
+    "Code": "DKK",
+    "Currency": "Danish Krone",
+    "Sell": "8035",
+    "Buy": "8015"
+  },
+  {
+    "Code": "AED",
+    "Currency": "UAE Dirham",
+    "Sell": "15200",
+    "Buy": "15150"
+  },
+  {
+    "Code": "JPY",
+    "Currency": "10Japanese Yen",
+    "Sell": "3720",
+    "Buy": "3710"
+  },
+  {
+    "Code": "TRY",
+    "Currency": "Turkish Lira",
+    "Sell": "1810",
+    "Buy": "1790"
+  },
+  {
+    "Code": "CNY",
+    "Currency": "Chinese Yuan",
+    "Sell": "7735",
+    "Buy": "7715"
+  },
+  {
+    "Code": "SAR",
+    "Currency": "KSA Riyal",
+    "Sell": "14800",
+    "Buy": "14700"
+  },
+  {
+    "Code": "INR",
+    "Currency": "Indian Rupee",
+    "Sell": "670",
+    "Buy": "665"
+  },
+  {
+    "Code": "MYR",
+    "Currency": "Ringgit",
+    "Sell": "11650",
+    "Buy": "11550"
+  },
+  {
+    "Code": "AFN",
+    "Currency": "Afghan Afghani",
+    "Sell": "755",
+    "Buy": "750"
+  },
+  {
+    "Code": "KWD",
+    "Currency": "Kuwaiti Dinar",
+    "Sell": "180400",
+    "Buy": "180000"
+  },
+  {
+    "Code": "IQD",
+    "Currency": "100Iraqi Dinar",
+    "Sell": "4240",
+    "Buy": "4230"
+  },
+  {
+    "Code": "BHD",
+    "Currency": "Bahraini Dinar",
+    "Sell": "147350",
+    "Buy": "146850"
+  },
+  {
+    "Code": "OMR",
+    "Currency": "Omani Rial",
+    "Sell": "144300",
+    "Buy": "144000"
+  },
+  {
+    "Code": "QAR",
+    "Currency": "Qatari Riyal",
+    "Sell": "15250",
+    "Buy": "15150"
+  }
+]
