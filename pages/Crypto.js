@@ -53,15 +53,15 @@ async function getData() {
 
   if (loading) 
   return (
-  <View style={{alignItems: 'center',flex:1,justifyContent: 'center',}}>
+  <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
     <Text>Loading...</Text>  
   </View>
   )
   else if (error)
   return(
-    <View style={{alignItems: 'center',flex:1,justifyContent: 'center',}}>
-    <Text style={{color:'red'}}>Error...</Text>  
-  </View>
+    <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
+      <Text style={{color:'red'}}>Error...</Text>  
+    </View>
   )
   else 
   return (

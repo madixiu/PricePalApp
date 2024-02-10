@@ -16,12 +16,13 @@ export default function App() {
           name="Assets"
           component={Assets}
           options={{
+            tabBarActiveBackgroundColor: 'gainsboro',
             tabBarActiveTintColor: "#001b2b",
-            tabBarInactiveTintColor: "gainsboro",
+            tabBarInactiveTintColor: "#999",
             tabBarIcon: ({ focused, color, size }) => (
               <Ionicons
                 name={"logo-usd"}
-                color={focused ? "#001b2d" : "gainsboro"}
+                color={focused ? "#001b2d" : "#999"}
                 size={32}
               />
             ),
@@ -31,12 +32,13 @@ export default function App() {
           name="Crypto"
           component={Crypto}
           options={{
+            tabBarActiveBackgroundColor: 'gainsboro',
             tabBarActiveTintColor: "#001b2b",
-            tabBarInactiveTintColor: "gainsboro",
+            tabBarInactiveTintColor: "#999",
             tabBarIcon: ({ focused, color, size }) => (
               <Ionicons
                 name={"logo-bitcoin"}
-                color={focused ? "#001b2d" : "gainsboro"}
+                color={focused ? "#001b2d" : "#999"}
                 size={32}
               />
             ),
@@ -46,12 +48,13 @@ export default function App() {
           name="Goods"
           component={Goods}
           options={{
+            tabBarActiveBackgroundColor: 'gainsboro',
             tabBarActiveTintColor: "#001b2b",
-            tabBarInactiveTintColor: "gainsboro",
+            tabBarInactiveTintColor: "#999",
             tabBarIcon: ({ focused, color, size }) => (
               <Ionicons
                 name={focused ? "basket" : "basket-outline"}
-                color={focused ? "#001b2d" : "gainsboro"}
+                color={focused ? "#001b2d" : "#999"}
                 size={32}
               />
             ),
