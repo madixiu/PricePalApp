@@ -51,7 +51,7 @@ const CryptoItem = (props) => {
         </View>
 
         <View style={styles.PriceViewStyle}>
-          <Text style={styles.priceTextStyling}>{props.price}</Text>
+          <Text style={styles.priceTextStyling}>${props.price}</Text>
         </View>
 
         <View style={styles.ChangeViewStyle}>
