@@ -16,9 +16,9 @@ const AssetItem = (props) => {
         <View style={styles.iconView}>
           <Image
             source={ImgURL}
-            style={{ width: 32, height: 32, borderRadius: 20 }}
+            style={{ width: 32, height: 32, borderRadius: 20,marginRight:4 }}
           />
-          <Text style={styles.text}>{Code}</Text>
+          <Text style={styles.assetSymbolText}>{Code}</Text>
         </View>
 
         <View style={styles.currencyView}>
@@ -26,11 +26,11 @@ const AssetItem = (props) => {
         </View>
 
         <View style={styles.priceView}>
-          <Text style={styles.text}>{priceOptimizer(Buy)}</Text>
+          <Text style={styles.priceText}>{priceOptimizer(Buy)}</Text>
         </View>
 
         <View style={styles.priceView}>
-          <Text style={styles.text}>{priceOptimizer(Sell)}</Text>
+          <Text style={styles.priceText}>{priceOptimizer(Sell)}</Text>
         </View>
       </View>
     </TouchableHighlight>
@@ -42,19 +42,22 @@ const styles = {
     flexDirection: "row",
     backgroundColor: "rgb(200, 200, 200)",
     elevation: 3,
-    margin: 3,
+    marginHorizontal:3,
+    marginVertical:2,
     borderRadius: 8,
-    padding: 10,
+    paddingHorizontal: 5,
+    paddingVertical: 9,
   },
 
   iconView: {
     alignItems: "center",
+    flexDirection:'row',
   },
 
   currencyView: {
     flex: 2,
     alignItems: "center",
-    marginLeft: 4,
+    // marginLeft: 4,
     justifyContent: 'center',
   },
 
@@ -67,6 +70,14 @@ const styles = {
   text: {
     fontSize: 12,
   },
+  assetSymbolText: {
+    fontSize: 10,
+    color: "#666",
+  },
+  priceText: {
+    fontSize:13,
+    fontWeight: "bold",
+  }
 };
 
 export default AssetItem;

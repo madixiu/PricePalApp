@@ -1,9 +1,9 @@
-import { View, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, FlatList,Text } from "react-native";
 import React from "react";
 import AssetItem from "../components/Assets/AssetItem";
 import CurrencyData from "../assets/data/Assetdata.json";
 import CoinData from "../assets/data/AssetdataCoins.json";
-
+import AssetsHeaderComponent from "../components/Assets/AssetsHeaderComponent";
 /**
  *
  * Assets component renders a list of currency exchange rates.
@@ -64,6 +64,7 @@ function Assets() {
   // }
   return (
     <View style={styles.container}>
+     <AssetsHeaderComponent />
       <FlatList
         style={styles.flatList}
         data={CurrencyData}
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
   flatList: {
     flex: 1,
     marginHorizontal: 2,
-    marginVertical: 2,
+    marginBottom: 2,
   },
 });
 

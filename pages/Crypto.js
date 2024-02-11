@@ -3,7 +3,8 @@ import React,{useState,useEffect} from 'react'
 import {View,Text,StyleSheet,FlatList,RefreshControl} from 'react-native'
 import {listingDataOptimizer} from '../components/misc/dataOptimizer';
 import CryptoItem from '../components/Crypto/CryptoItem';
-
+import CryptoHeaderComponent from '../components/Crypto/CryptoHeaderComponent';
+import LoadingSpinner from '../components/LoadingSpinner';
 export default function Crypto(props) {
   const [CryptoList, setCryptoList] = useState([]);
   const [Refreshing, setRefreshing] = useState(false);
@@ -21,7 +22,7 @@ export default function Crypto(props) {
   }
 async function getData() {
   try {
-    const response = await fetch('https://api.alternative.me/v2/ticker/?limit=10');
+    const response = await fetch('https://api.alternative.me/v2/ticker/?limit=30');
     const data = await response.json();
     let dataOPed = listingDataOptimizer(data.data);
     setCryptoList(dataOPed);
@@ -53,9 +54,10 @@ async function getData() {
 
   if (loading) 
   return (
-  <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
-    <Text>Loading...</Text>  
-  </View>
+  // <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
+  //   <Text>Loading...</Text>  
+  // </View>
+  <LoadingSpinner />
   )
   else if (error)
   return(
@@ -66,21 +68,9 @@ async function getData() {
   else 
   return (
     <View style={{flex:1,backgroundColor:'#999'}}>
-        <View style={styles.listHeader}>
-          <View style={{flex:1,alignItems: 'flex-start',flexWrap:'wrap',justifyContent:'center'}}>
-            <Text style={{fontSize:11,color:'#111'}}>Coin</Text>
+     
 
-          </View>
-          <View style={{alignItems:'center',flexWrap:'wrap',justifyContent:'center'}}>
-            <Text style={{fontSize:11,color:'#111'}}>Price $</Text>
-
-          </View>
-          <View  style={{flex:1,alignItems:'flex-start',flexWrap:'wrap-reverse',justifyContent:'center'}}>
-            <Text style={{fontSize:11,color:'#111'}}>Change %</Text>
-
-          </View>
-
-      </View>
+      <CryptoHeaderComponent />
         <View style={styles.listView}>
           
           <FlatList

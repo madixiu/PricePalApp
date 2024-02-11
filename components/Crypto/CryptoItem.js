@@ -143,7 +143,8 @@ const styles = StyleSheet.create({
     marginRight: 2,
   },
   priceTextStyling: {
-    fontSize: 12,
+    fontSize: 13,
+    fontWeight: "bold",
   },
   changeTextStyling: {
     fontSize: 11,
