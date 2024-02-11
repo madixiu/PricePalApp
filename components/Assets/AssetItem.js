@@ -1,90 +1,72 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableHighlight,
-  Image
-} from "react-native";
+import { View, Text, TouchableHighlight, Image } from "react-native";
+
 import React from "react";
 import { priceOptimizer } from "../misc/numberOptimizer";
 
 const AssetItem = (props) => {
+  const { ImgURL, Code, Currency, Buy, Sell } = props;
+
   return (
     <TouchableHighlight
-      activeopacity={0.6}
+      activeOpacity={0.6}
       underlayColor="#999"
       onPress={() => {}}
     >
       <View style={styles.container}>
-        <View style={styles.IconViewStyle}>
-
+        <View style={styles.iconView}>
           <Image
-            source={props.ImgURL}
+            source={ImgURL}
             style={{ width: 32, height: 32, borderRadius: 20 }}
           />
+          <Text style={styles.text}>{Code}</Text>
+        </View>
 
-          <Text style={styles.priceTextStyling}>{props.Code}</Text>
+        <View style={styles.currencyView}>
+          <Text style={styles.text}>{Currency}</Text>
         </View>
-        <View style={styles.PriceViewStyle}>
-          <Text style={styles.priceTextStyling}>{props.Currency}</Text>
+
+        <View style={styles.priceView}>
+          <Text style={styles.text}>{priceOptimizer(Buy)}</Text>
         </View>
-        <View style={styles.PriceViewStyle}>
-          <Text style={styles.priceTextStyling}>{priceOptimizer(props.Buy)}</Text>
-        </View>
-        <View style={styles.PriceViewStyle}>
-          <Text style={styles.priceTextStyling}>{priceOptimizer(props.Sell)}</Text>
+
+        <View style={styles.priceView}>
+          <Text style={styles.text}>{priceOptimizer(Sell)}</Text>
         </View>
       </View>
     </TouchableHighlight>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flexDirection: "row",
-    backgroundColor: "rgb( 200, 200, 200)",
-    // backgroundColor: 'red',
-    // borderColor: "#888",
-    // borderStyle: "solid",
-    // borderWidth: 0.5,
+    backgroundColor: "rgb(200, 200, 200)",
     elevation: 3,
-    // marginHorizontal: 5,
-    marginLeft: 5,
-    marginRight: 5,
-    marginBottom: 3,
-    marginTop:1,
+    margin: 3,
     borderRadius: 8,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    // flex:1,
-
-    // width: '100%',
-    // alignSelf: 'stretch',
-    // justifyContent: 'space-between',
-    // alignItems: 'space-between',
-    // minHeight: 74
+    padding: 10,
   },
 
-
-  priceTextStyling: {
-    fontSize: 12,
-  },
-
-  IconViewStyle: {
-    // backgroundColor: 'gainsboro',
-    // height: 70,
-    // flex:1,
-    // flexDirection: 'row',
-    // justifyContent: 'flex-start',
-    alignItems: 'center',
-    // paddingTop: 25
-  },
-  PriceViewStyle: {
-    flex: 1,
-    justifyContent: "center",
+  iconView: {
     alignItems: "center",
   },
 
- 
-});
+  currencyView: {
+    flex: 2,
+    alignItems: "center",
+    marginLeft: 4,
+    justifyContent: 'center',
+  },
+
+  priceView: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: 'center',
+  },
+
+  text: {
+    fontSize: 12,
+  },
+};
+
 export default AssetItem;
