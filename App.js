@@ -1,4 +1,4 @@
-import { StatusBar } from "react-native";
+import { StatusBar,I18nManager } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Assets from "./pages/Assets";
@@ -9,6 +9,7 @@ import { Ionicons } from "@expo/vector-icons";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  I18nManager.forceRTL(false);
   return (
     <NavigationContainer>
       <Tab.Navigator>

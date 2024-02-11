@@ -17,16 +17,12 @@ const AssetItem = (props) => {
     >
       <View style={styles.container}>
         <View style={styles.IconViewStyle}>
+
           <Image
-            source={{
-              uri: "../../assets/flags/" + props.Code + ".png",
-              cache: "force-cache",
-            }}
+            source={props.ImgURL}
             style={{ width: 32, height: 32, borderRadius: 20 }}
           />
-        </View>
 
-        <View style={styles.PriceViewStyle}>
           <Text style={styles.priceTextStyling}>{props.Code}</Text>
         </View>
         <View style={styles.PriceViewStyle}>
@@ -68,40 +64,19 @@ const styles = StyleSheet.create({
     // alignItems: 'space-between',
     // minHeight: 74
   },
-  symbolTextStyling: {
-    fontSize: 12,
-    // paddingLeft: 10,
-  },
-  nameTextStyling: {
-    fontSize: 9,
-    // paddingLeft: 10,
-    color: "#666",
-  },
-  rankTextStyling: {
-    fontSize: 7,
-    color: "white",
-  },
-  rankTextView: {
-    backgroundColor: "#999999",
-    borderRadius: 2,
-    padding: 2,
-    paddingHorizontal: 5,
-    marginRight: 2,
-  },
+
+
   priceTextStyling: {
     fontSize: 12,
   },
-  changeTextStyling: {
-    fontSize: 11,
-    // paddingRight: 22,
-  },
+
   IconViewStyle: {
     // backgroundColor: 'gainsboro',
     // height: 70,
     // flex:1,
     // flexDirection: 'row',
     // justifyContent: 'flex-start',
-    // alignItems: 'center',
+    alignItems: 'center',
     // paddingTop: 25
   },
   PriceViewStyle: {
@@ -109,18 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  ChangeViewStyle: {
-    flex: 1,
-    justifyContent: "flex-end",
-    paddingTop: 5,
-    paddingBottom: 5,
-  },
-  ChangeSubViewStyle: {
-    // flex:1,
-    flexDirection: "row",
-    justifyContent: "flex-end",
 
-    paddingRight: 22,
-  }
+ 
 });
 export default AssetItem;
