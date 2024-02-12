@@ -36,3 +36,4 @@ yarn-error.*
 
 yarn.lock
 .vscode/
+assets/coins/original.7z
