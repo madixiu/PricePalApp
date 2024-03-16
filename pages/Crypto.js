@@ -68,8 +68,6 @@ async function getData() {
   else 
   return (
     <View style={{flex:1,backgroundColor:'#999'}}>
-     
-
       <CryptoHeaderComponent />
         <View style={styles.listView}>
           

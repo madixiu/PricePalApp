@@ -21,10 +21,6 @@ const CoinItem = (props) => {
           <Text style={styles.assetSymbolText}>{GoldCoins}</Text>
         </View>
 
-        {/* <View style={styles.currencyView}>
-          <Text style={styles.text}>{GoldCoins}</Text>
-        </View> */}
-
         <View style={styles.priceView}>
           <Text style={styles.priceText}>{priceOptimizer(Buy)}</Text>
         </View>
