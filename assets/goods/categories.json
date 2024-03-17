@@ -1,0 +1,451 @@
+{
+  "data": {
+    "superMarketCategoryProductList": {
+      "status": true,
+      "data": {
+        "title": null,
+        "count": 43,
+        "extraSections": {
+          "categories": [
+            {
+              "id": 731267,
+              "title": "شامپو و مراقبت مو",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/6580482f3dc65.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731273,
+              "title": "بهداشت دهان و دندان",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/65804766ea5c0.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731266,
+              "title": "بهداشت زنان",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/6580484ac6028.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731269,
+              "title": "بهداشت و مراقبت بدن",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/658047ef332bf.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731270,
+              "title": "بهداشت و مراقبت صورت",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/658047ca989c1.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731277,
+              "title": "اسپری و ضدتعریق",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/658046cf05624.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731268,
+              "title": "بهداشت جنسی",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/6580480acbee1.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731275,
+              "title": "اصلاح صورت و بدن",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/658047318522b.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731276,
+              "title": "صابون",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/65804719eb621.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731272,
+              "title": "آرایش مو",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/6580479309ac1.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            },
+            {
+              "id": 731271,
+              "title": "دستمال مرطوب",
+              "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/658047af108a0.jpg?x-img=v1/optimize,q_100/resize,w_462",
+              "__typename": "CategoryItem"
+            }
+          ],
+          "filters": {
+            "top": {
+              "data": [
+                {
+                  "title": "ارزان‌ترین",
+                  "value": "least_expensive",
+                  "__typename": "SectionData"
+                },
+                {
+                  "title": "گران‌ترین",
+                  "value": "most_expensive",
+                  "__typename": "SectionData"
+                }
+              ],
+              "__typename": "Top"
+            },
+            "sections": [
+              {
+                "data": [
+                  {
+                    "title": "موجود",
+                    "value": "has_stock",
+                    "__typename": "SectionData"
+                  },
+                  {
+                    "title": "دارای تخفیف",
+                    "value": "has_discount",
+                    "__typename": "SectionData"
+                  }
+                ],
+                "__typename": "Sections"
+              }
+            ],
+            "__typename": "Filters"
+          },
+          "__typename": "ExtraSections"
+        },
+        "finalResult": [
+          {
+            "id": 4078069,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4078069,
+              "title": "نوار بهداشتی بالدار بزرگ پنبه ریز 10 عددی",
+              "score": 0,
+              "rating": 0.86281200631912,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 26900,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "پنبه ریز",
+              "menuCategoryId": 731266,
+              "stock": 137,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fc87f1ddd7.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4078234,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4078234,
+              "title": "نوار بهداشتی بالدار خیلی نازک پنبه‌ریز 10 عددی",
+              "score": 0,
+              "rating": 0.78193445243805,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 31000,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "پنبه ریز",
+              "menuCategoryId": 731266,
+              "stock": 65,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/65b3bc136b6e1.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4747725,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4747725,
+              "title": "نوار بهداشتی بالدار خیلی خیلی بزرگ Yalda تافته 7 عددی",
+              "score": 0,
+              "rating": 0.8650406504065,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 47000,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "تافته",
+              "menuCategoryId": 731266,
+              "stock": 107,
+              "capacity": 100,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fc87f54539.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4079399,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4079399,
+              "title": "نوار بهداشتی بالدار بزرگ ضخیم کلاسیک بنفش مای لیدی 10 عددی",
+              "score": 0,
+              "rating": 0.87304902814041,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 26500,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "مای لیدی",
+              "menuCategoryId": 731266,
+              "stock": 20,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fd71ad5a72.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4440627,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4440627,
+              "title": "نوار بهداشتی بالدار نازک ویژه شب تافته 7 عددی",
+              "score": 0,
+              "rating": 0.8595281306715099,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 38000,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "تافته",
+              "menuCategoryId": 731266,
+              "stock": 23,
+              "capacity": 1,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/65b3bbf46ed32.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4078235,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4078235,
+              "title": "نوار بهداشتی بالدار بزرگ خیلی نازک مشبک پنبه ریز 10 عددی",
+              "score": 0,
+              "rating": 0.8665480427046299,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 32500,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "پنبه ریز",
+              "menuCategoryId": 731266,
+              "stock": 25,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fd4760272a.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4747741,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4747741,
+              "title": "نوار بهداشتی بالدار بزرگ روز تافته 7 عددی",
+              "score": 0,
+              "rating": 0.87011952191235,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 35000,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "تافته",
+              "menuCategoryId": 731266,
+              "stock": 13,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fc87f883be.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4186723,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4186723,
+              "title": "نوار بهداشتی بالدار بزرگ Ultra مولپد 8 عددی",
+              "score": 0,
+              "rating": 0.86174358974359,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 35200,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "مولپد",
+              "menuCategoryId": 731266,
+              "stock": 3,
+              "capacity": null,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fd71bd3a19.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4079365,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4079365,
+              "title": "پد روزانه کوچک خیلی نازک تافته 20 عددی",
+              "score": 0,
+              "rating": 0.8694029850746301,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 30000,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "تافته",
+              "menuCategoryId": 731266,
+              "stock": 28,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fc87f47bb8.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          },
+          {
+            "id": 4658727,
+            "type": "PRODUCT",
+            "data": {
+              "id": 4658727,
+              "title": "نوار بهداشتی بالدار ویژه شب اولترا نازک تافته 7 عددی",
+              "score": 0,
+              "rating": 0.85625,
+              "type": "PRODUCT_VARIATION",
+              "discount": 0,
+              "discountRatio": null,
+              "description": "",
+              "price": 38000,
+              "vendorLogo": null,
+              "highlight": "",
+              "popularityBadgeUrl": "",
+              "commentCount": 0,
+              "isEcommerce": false,
+              "noStock": false,
+              "brand": "تافته",
+              "menuCategoryId": 731266,
+              "stock": 84,
+              "capacity": 50,
+              "images": [
+                {
+                  "thumb": "https://cdn.snapp.express/200x201/cdn/27/70/2/product_image/zoodfood/652fc87f8ddff.jpg",
+                  "__typename": "ProductImages"
+                }
+              ],
+              "__typename": "ProductItem"
+            },
+            "__typename": "ProductListFinalResult"
+          }
+        ],
+        "__typename": "ProductListResult"
+      },
+      "__typename": "ProductListResponse"
+    }
+  }
+}

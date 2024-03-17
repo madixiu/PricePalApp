@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "پروتیین و تخم مرغ",
+    "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/6580538196edc.jpg?x-img=v1/optimize,q_100/resize,w_64"
+  },
+  {
+    "id": "2",
+    "title": "لبنیات و بستنی",
+    "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/65dc5a35a927c.png?x-img=v1/optimize,q_100/resize,w_64"
+  },
+  {
+    "id": "3",
+    "title": "نوشیدنی",
+    "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/65bf43e3e9e79.png?x-img=v1/optimize,q_100/resize,w_64"
+  },
+  {
+    "id": "4",
+    "title": "میوه و سبزیجات تازه",
+    "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/658053c998d01.jpg?x-img=v1/optimize,q_100/resize,w_64"
+  },
+  {
+    "id": "5",
+    "title": "کنسرو، غذای آماده",
+    "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/65dc5ab3bd7cc.png?x-img=v1/optimize,q_100/resize,w_64"
+  },
+  {
+    "id": "6",
+    "title": "صبحانه",
+    "image": "https://cdn.snapp.express/cdn/27/70/2/menu_category_image/zoodfood/65dc5aa81f67f.jpg?x-img=v1/optimize,q_100/resize,w_64"
+  }
+]

@@ -1,4 +1,4 @@
-import { StatusBar, I18nManager,View,TouchableOpacity,Text } from "react-native";
+import { StatusBar, I18nManager,View,TouchableOpacity,Text,Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
@@ -11,6 +11,18 @@ import {FontAwesome5} from '@expo/vector-icons';
 const Tab = createBottomTabNavigator();
 
 
+
+const LogoTitle = (props) => {
+  return (
+    <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+      <Image
+        source={require("./assets/logo.png")}
+        style={{ width: 32,height: 32}}
+        />
+        <Text>{props.children}</Text>
+      </View>
+  )
+}
 
 function TopTabs({ state, descriptors, navigation }) {
   return (
@@ -62,11 +74,20 @@ export default function App() {
   I18nManager.forceRTL(false);
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator initialRouteName="Goods">
+        
         <Tab.Screen
           name="AssetsCoins"
           component={AssetsTabs}
           options={{
+            headerTitle: (props) => <LogoTitle {...props} />,
+
+            headerRight: () => (
+              <TouchableOpacity>
+                <Text>Button</Text>
+              </TouchableOpacity>
+            ),
+            
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: "#001b2b",
             tabBarInactiveTintColor: "#999",
@@ -84,6 +105,8 @@ export default function App() {
           name="Crypto"
           component={Crypto}
           options={{
+            headerTitle: (props) => <LogoTitle {...props} />,
+
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: "#001b2b",
             tabBarInactiveTintColor: "#999",
@@ -101,6 +124,8 @@ export default function App() {
           name="Goods"
           component={Goods}
           options={{
+            headerTitle: (props) => <LogoTitle {...props} />,
+
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: "#001b2b",
             tabBarInactiveTintColor: "#999",
