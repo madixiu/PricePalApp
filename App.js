@@ -74,7 +74,7 @@ export default function App() {
   I18nManager.forceRTL(false);
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="Goods">
+      <Tab.Navigator initialRouteName="Crypto">
         
         <Tab.Screen
           name="AssetsCoins"

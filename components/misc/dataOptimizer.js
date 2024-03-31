@@ -24,20 +24,18 @@ export function listingDataOptimizer(data) {
       return dataEl
 }
 export function itemDataOptimizer(data) {
-  // var data = Object.values(data)
-  data = data[0]
-  data.price_usd = priceOptimizer(data.price_usd);
-  data.market_cap_usd = bigNumberOptimizer(data.market_cap_usd);
+  // data.price = priceOptimizer(data.price);
+  data.market_cap = bigNumberOptimizer(data.market_cap);
   //! cant refer to this because its value starts with number (HAVE TO SOLVE THIS LATAER!)
   // data.24h_volume_usd = bigNumberOptimizer(data.24h_volume_usd);
-  if (data.percent_change_24h != null && data.percent_change_24h !=0)
-    data.percent_change_24h = twoDigitTruncator(data.percent_change_24h)
+  if (data.change24h != null && data.change24h !=0)
+    data.change24h = twoDigitTruncator(data.change24h)
 
-    if (data.percent_change_1h != null && data.percent_change_1h !=0)
-    data.percent_change_1h = twoDigitTruncator(data.percent_change_1h)
+    if (data.change1h != null && data.change1h !=0)
+    data.change1h = twoDigitTruncator(data.change1h)
 
-    if (data.percent_change_7d != null && data.percent_change_7d !=0)
-    data.percent_change_7d = twoDigitTruncator(data.percent_change_7d)
+    if (data.change7d != null && data.change7d !=0)
+    data.change7d = twoDigitTruncator(data.change7d)
 
   return data
 

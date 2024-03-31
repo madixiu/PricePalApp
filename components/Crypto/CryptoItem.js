@@ -9,7 +9,7 @@ import React from "react";
 import { percent_text_color } from "../misc/dynamicStyles";
 
 const onItemClick = (data, navigation) => {
-  // navigation.navigate('ItemDetail',{data: data})
+  navigation.navigate('CryptoItemDetail',{data: data})
   return;
 };
 
