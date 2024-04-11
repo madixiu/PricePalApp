@@ -1,6 +1,6 @@
 // import axios from 'axios';
 import React,{useState,useEffect} from 'react'
-import {View,Text,StyleSheet,FlatList,RefreshControl} from 'react-native'
+import {View,Text,StyleSheet,FlatList,RefreshControl, TouchableHighlight} from 'react-native'
 import { listingDataOptimizer } from '../misc/dataOptimizer';
 import CryptoItem from './CryptoItem';
 import CryptoHeaderComponent from './CryptoHeaderComponent';
@@ -21,6 +21,11 @@ export default function CryptoComponent(props) {
     setTimeout(() => {
       setRefreshing(false);
     }, 2000);
+  }
+  function errorHandler(){
+    setError(false);
+    setLoading(true);
+    getData();
   }
 async function getData() {
   try {
@@ -64,7 +69,10 @@ async function getData() {
   else if (error)
   return(
     <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
-      <Text style={{color:'red'}}>Error...</Text>  
+      
+      <TouchableHighlight style={{borderWidth:2,borderColor:'white',padding:10,borderRadius:8}} onPress={() => errorHandler()}>
+        <Text style={{color:'white'}}>Try Again!</Text>
+      </TouchableHighlight>  
     </View>
   )
   else 
