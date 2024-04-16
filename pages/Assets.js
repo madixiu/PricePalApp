@@ -2,7 +2,6 @@ import { View, StyleSheet, FlatList,Text } from "react-native";
 import React from "react";
 import AssetItem from "../components/Assets/AssetItem";
 import CurrencyData from "../assets/data/Assetdata.json";
-import CoinData from "../assets/data/AssetdataCoins.json";
 import AssetsHeaderComponent from "../components/Assets/AssetsHeaderComponent";
 /**
  *

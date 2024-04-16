@@ -59,21 +59,27 @@ function TopTabs({ state, descriptors, navigation }) {
 const AssetsTab = createMaterialTopTabNavigator();
 
 function AssetsTabs() {
+  I18nManager.forceRTL(true);
+
+  // I18nManager.swapLeftAndRightInRTL(true);
+
   return (
     <AssetsTab.Navigator 
     // initialRouteName="Coins"
     tabBar={props => <TopTabs {...props} />}
     >
-      <AssetsTab.Screen name="Assets" component={Assets} />
-      <AssetsTab.Screen name="Coins" component={Coins} />
+      <AssetsTab.Screen name="ارز" component={Assets} />
+      <AssetsTab.Screen name="سکه" component={Coins} />
     </AssetsTab.Navigator>
   );
 }
 
 export default function App() {
-  I18nManager.forceRTL(false);
+  I18nManager.forceRTL(true);
+  // I18nManager.allowRTL(true);
+  // I18nManager.swapLeftAndRightInRTL(true);
   return (
-    <NavigationContainer>
+    <NavigationContainer style={{direction:'rtl'}}>
       <Tab.Navigator initialRouteName="Crypto">
         
         <Tab.Screen
