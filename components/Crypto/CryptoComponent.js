@@ -5,6 +5,8 @@ import { listingDataOptimizer } from '../misc/dataOptimizer';
 import CryptoItem from './CryptoItem';
 import CryptoHeaderComponent from './CryptoHeaderComponent';
 import LoadingSpinner from '../LoadingSpinner';
+import CryptoOverviewWidget from './CryptoOverviewWidget';
+import color from '../misc/color';
 
 
 export default function CryptoComponent(props) {
@@ -77,7 +79,8 @@ async function getData() {
   )
   else 
   return (
-    <View style={{flex:1,backgroundColor:'#999'}}>
+    <View style={{flex:1,backgroundColor:color.background}}>
+      <CryptoOverviewWidget />
       <CryptoHeaderComponent />
         <View style={styles.listView}>
           

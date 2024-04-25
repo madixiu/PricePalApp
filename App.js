@@ -2,6 +2,9 @@ import { StatusBar, I18nManager,View,TouchableOpacity,Text,Image } from "react-n
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+//* importing fonts
+import { useFonts } from "expo-font";
+import color from "./components/misc/color";
 import Assets from "./pages/Assets";
 import Crypto from "./pages/Crypto";
 import Coins from "./pages/Coins";
@@ -10,6 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import {FontAwesome5} from '@expo/vector-icons';
 const Tab = createBottomTabNavigator();
 
+const colors = color;
 
 
 const LogoTitle = (props) => {
@@ -25,8 +29,10 @@ const LogoTitle = (props) => {
 }
 
 function TopTabs({ state, descriptors, navigation }) {
+  // I18nManager.forceRTL(true)
+  I18nManager.allowRTL(true);
   return (
-    <View style={{backgroundColor:'gainsboro',flexDirection: 'row',justifyContent:'center',paddingVertical:10}}>
+    <View style={{backgroundColor:'gainsboro',flexDirection: 'row-reverse',justifyContent:'center',paddingVertical:5,layoutDirection:'rtl'}}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -39,14 +45,14 @@ function TopTabs({ state, descriptors, navigation }) {
         const isFocused = state.index === index;
         return (
           <TouchableOpacity
-            style={{flex:1,alignItems: 'center',flexDirection: 'row',justifyContent:'center'}}
+            style={{flex:1,alignItems: 'center',flexDirection: 'row',justifyContent:'center',backgroundColor: isFocused ? colors.card : '#eee',borderRadius:5,paddingVertical:3,marginHorizontal:10}}
             key={route.key}
             onPress={() => navigation.navigate(route.name)}
           > 
-            <Text style={{color: isFocused ? '#001b2d' : 'gray',paddingVertical:3,marginHorizontal:3}}>
-              {label}
+            <Text style={{color: isFocused ? colors.primary : 'gray',paddingVertical:3,marginHorizontal:3,fontSize:11,fontFamily:'vazir'}}>
+              {label == 'Assets' ? 'ارز' : 'سکه'}
             </Text>
-            <FontAwesome5 name={route.name === 'Assets' ? 'money-bill-alt' : 'coins'} size={16} color={isFocused? "#001b2d" : "gray"} />
+            <FontAwesome5 name={route.name == 'Assets' ? 'money-bill-alt' : 'coins'} size={16} color={isFocused? colors.primary : "gray"} />
           </TouchableOpacity>
         );
       })}
@@ -59,49 +65,62 @@ function TopTabs({ state, descriptors, navigation }) {
 const AssetsTab = createMaterialTopTabNavigator();
 
 function AssetsTabs() {
-  I18nManager.forceRTL(true);
+  I18nManager.allowRTL(true);
 
   // I18nManager.swapLeftAndRightInRTL(true);
 
   return (
-    <AssetsTab.Navigator 
+    <AssetsTab.Navigator  style={{layoutDirection:'rtl'}}
     // initialRouteName="Coins"
+    initialRouteName="Assets"
     tabBar={props => <TopTabs {...props} />}
     >
-      <AssetsTab.Screen name="ارز" component={Assets} />
-      <AssetsTab.Screen name="سکه" component={Coins} />
+      <AssetsTab.Screen name="Coins" component={Coins} />
+      <AssetsTab.Screen name="Assets" component={Assets} />
     </AssetsTab.Navigator>
   );
 }
 
 export default function App() {
-  I18nManager.forceRTL(true);
-  // I18nManager.allowRTL(true);
+  const [fontsLoaded] = useFonts({
+    "vazir": require("./assets/fonts/Vazirmatn-FD-Regular.ttf"),
+  });
+
+  // I18nManager.forceRTL(true);
+  I18nManager.allowRTL(true);
   // I18nManager.swapLeftAndRightInRTL(true);
+
+  if (!fontsLoaded) {
+    return <Text>Loading...</Text>;
+  }
   return (
-    <NavigationContainer style={{direction:'rtl'}}>
+    <NavigationContainer>
       <Tab.Navigator initialRouteName="Crypto">
         
         <Tab.Screen
-          name="AssetsCoins"
+          name="AssetCoins"
           component={AssetsTabs}
           options={{
             headerTitle: (props) => <LogoTitle {...props} />,
-
+            
             headerRight: () => (
               <TouchableOpacity>
                 <Text>Button</Text>
               </TouchableOpacity>
             ),
-            
+            tabBarLabel: "ارز و سکه",
             tabBarActiveBackgroundColor: "gainsboro",
-            tabBarActiveTintColor: "#001b2b",
+            tabBarActiveTintColor: color.primary,
             tabBarInactiveTintColor: "#999",
+            tabBarLabelStyle:{
+              fontSize:11,
+              fontFamily:'vazir',
+            },
             tabBarIcon: ({ focused, color, size }) => (
-              <Ionicons
-                name={"logo-usd"}
-                color={focused ? "#001b2d" : "#999"}
-                size={32}
+              <FontAwesome5
+                name={"coins"}
+                color={focused ? colors.primary : "#999"}
+                size={24}
               />
             ),
           }}
@@ -111,16 +130,22 @@ export default function App() {
           name="Crypto"
           component={Crypto}
           options={{
-            headerTitle: (props) => <LogoTitle {...props} />,
+            // headerShown:false,
+            // headerTitle: (props) => <LogoTitle {...props} />,
 
             tabBarActiveBackgroundColor: "gainsboro",
-            tabBarActiveTintColor: "#001b2b",
+            tabBarActiveTintColor: colors.primary,
             tabBarInactiveTintColor: "#999",
+            tabBarLabel:"کریپتو",
+            tabBarLabelStyle:{
+              fontSize:11,
+              fontFamily:'vazir',
+            },
             tabBarIcon: ({ focused, color, size }) => (
               <FontAwesome5
                 name={"bitcoin"}
-                color={focused ? "#001b2d" : "#999"}
-                size={32}
+                color={focused ? colors.primary : "#999"}
+                size={28}
               />
             ),
           }}
@@ -133,12 +158,17 @@ export default function App() {
             headerTitle: (props) => <LogoTitle {...props} />,
 
             tabBarActiveBackgroundColor: "gainsboro",
-            tabBarActiveTintColor: "#001b2b",
+            tabBarActiveTintColor: color.primary,
             tabBarInactiveTintColor: "#999",
+            tabBarLabel:"سوپر مارکت",
+            tabBarLabelStyle:{
+              fontSize:11,
+              fontFamily:'vazir',
+            },
             tabBarIcon: ({ focused, color, size }) => (
               <Ionicons
                 name={focused ? "basket" : "basket-outline"}
-                color={focused ? "#001b2d" : "#999"}
+                color={focused ? colors.primary : "#999"}
                 size={32}
               />
             ),

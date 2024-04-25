@@ -27,11 +27,11 @@ export function unixToDate(unix) {
   // const month = date.getMonth() + 1;
   // const day = date.getDate();
   const hour = date.getHours();
-  const minute = date.getMinutes();
+  var minute = date.getMinutes();
   if (minute < 10) {
     minute = `0${minute}`;
   }
-  const second = date.getSeconds();
+  // const second = date.getSeconds();
 
   return `${hour}:${minute}`;
 

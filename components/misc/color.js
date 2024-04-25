@@ -1,4 +1,3 @@
-import { red } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 // colors.js
 export default {

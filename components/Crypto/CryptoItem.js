@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { percent_text_color } from "../misc/dynamicStyles";
+import color from "../misc/color";
 
 const onItemClick = (data, navigation) => {
   navigation.navigate('CryptoItemDetail',{data: data})
@@ -33,7 +34,7 @@ const CryptoItem = (props) => {
   return (
     <TouchableHighlight
       activeOpacity={0.6}
-      underlayColor="#999"
+      underlayColor={color.background}
       onPress={() => onItemClick(passingData, props.navigation)}
     >
       <View style={styles.container}>
@@ -116,10 +117,13 @@ const CryptoItem = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgb( 200, 200, 200)",
-    marginBottom: 3,
-    marginTop: 1,
-    borderRadius: 8,
+    backgroundColor: color.card,
+    elevation: 3,
+    // marginBottom: 3,
+    // marginTop: 1,
+    marginHorizontal:3,
+    marginVertical:2,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",

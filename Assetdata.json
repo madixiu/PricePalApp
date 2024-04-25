@@ -4,7 +4,7 @@
     "Currency": "US Dollar",
     "Sell": "55550",
     "Buy": "55450",
-    "PersianName": "دلار امریکا"
+    "PersianName": "دالر امریکا"
   },
   {
     "Code": "EUR",
@@ -18,7 +18,7 @@
     "Currency": "British Pound",
     "Sell": "70200",
     "Buy": "70000",
-    "PersianName": "پوند بریتانیا"
+    "PersianName": "پوند انگلیس"
   },
   {
     "Code": "CHF",
@@ -32,14 +32,14 @@
     "Currency": "Canadian Dollar",
     "Sell": "41250",
     "Buy": "41150",
-    "PersianName": "دلار کانادا"
+    "PersianName": "دالر کانادا"
   },
   {
     "Code": "AUD",
     "Currency": "Australian Dollar",
     "Sell": "36200",
     "Buy": "36100",
-    "PersianName": "دلار استرالیا"
+    "PersianName": "دالر آسترالیا"
   },
   {
     "Code": "SEK",
@@ -74,14 +74,14 @@
     "Currency": "Singapore Dollar",
     "Sell": "41250",
     "Buy": "41150",
-    "PersianName": "دلار سنگاپور"
+    "PersianName": "دالر سینگاپور"
   },
   {
     "Code": "HKD",
     "Currency": "Hong Kong Dollar",
     "Sell": "7100",
     "Buy": "7070",
-    "PersianName": "دلار هنگ کنگ"
+    "PersianName": "دالر هانگ کنگ"
   },
   {
     "Code": "AZN",
@@ -95,7 +95,7 @@
     "Currency": "Armenian Dram",
     "Sell": "1375",
     "Buy": "1370",
-    "PersianName": "درام ارمنستان"
+    "PersianName": "درام آرمنستان"
   },
   {
     "Code": "DKK",

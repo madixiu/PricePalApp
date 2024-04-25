@@ -1,15 +1,15 @@
 import { View, Text, TouchableHighlight, Image } from "react-native";
 
 import React from "react";
-import { priceOptimizer } from "../misc/numberOptimizer";
-
+import { latinToArabicNumerals, priceOptimizer } from "../misc/numberOptimizer";
+import color from "../misc/color";
 const CoinItem = (props) => {
-  const { ImgURL, GoldCoins, Buy, Sell } = props;
+  const { ImgURL, Name, Buy, Sell } = props;
 
   return (
     <TouchableHighlight
       activeOpacity={0.6}
-      underlayColor="#999"
+      underlayColor={color.background}
       onPress={() => {}}
     >
       <View style={styles.container}>
@@ -18,7 +18,7 @@ const CoinItem = (props) => {
             source={ImgURL}
             style={{ width: 32, height: 32, borderRadius: 20,marginRight:4 }}
           />
-          <Text style={styles.assetSymbolText}>{GoldCoins}</Text>
+          <Text style={styles.assetSymbolText}>{Name}</Text>
         </View>
 
         <View style={styles.priceView}>
@@ -36,7 +36,8 @@ const CoinItem = (props) => {
 const styles = {
   container: {
     flexDirection: "row",
-    backgroundColor: "rgb(200, 200, 200)",
+    // backgroundColor: "rgb(200, 200, 200)",
+    backgroundColor:color.card,
     elevation: 3,
     marginHorizontal:3,
     marginVertical:2,
@@ -68,11 +69,14 @@ const styles = {
     fontSize: 12,
   },
   assetSymbolText: {
-    fontSize: 12,
+    fontFamily: "vazir",
+    fontSize: 13,
   
   },
   priceText: {
-    fontSize:13,
+    fontSize:12,
+    fontFamily: "vazir",
+
     fontWeight: "bold",
   }
 };

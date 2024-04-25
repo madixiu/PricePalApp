@@ -3,6 +3,7 @@ import React from "react";
 import CoinsHeaderComponent from "../components/Coins/CoinsHeaderComponent";
 import CoinData from "../assets/data/AssetdataCoins.json";
 import CoinItem from "../components/Coins/CoinItem";
+import color from "../components/misc/color.js";
 const Coins = () => {
   const bundleImages = {
     azadi: require("../assets/coins/azadi.png"),
@@ -12,7 +13,7 @@ const Coins = () => {
   const getImageUrl = (code) => bundleImages[code];
 
   return (
-    <View style={{ backgroundColor: "#999", flex: 1 }}>
+    <View style={styles.container}>
       <CoinsHeaderComponent />
       <FlatList
         style = {styles.flatList}
@@ -20,7 +21,7 @@ const Coins = () => {
         keyExtractor={(item) => item.GoldCoins}
         renderItem={({ item }) => (
           <CoinItem
-            GoldCoins={item.GoldCoins}
+            Name={item.PersianName}
             Buy={item.Buy}
             Sell={item.Sell}
             ImgURL={getImageUrl(item.Icon)}
@@ -34,7 +35,8 @@ const Coins = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#999",
+    // backgroundColor: "#999",
+    backgroundColor: color.background
   },
   flatList: {
     flex: 1,

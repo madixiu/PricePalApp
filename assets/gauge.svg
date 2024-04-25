@@ -1,0 +1,13 @@
+<svg viewBox="0 0 100 100" width="500" height="500" >
+  <rect width="100%" height="100%" fill="#eee"/>
+  <g transform="rotate(135 50 50)" fill="none" stroke-width="10">
+    <circle cx="50" cy="50" r="45" stroke="#00d680" stroke-dashoffset="-120" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
+    <circle cx="50" cy="50" r="45" stroke="#6fed00" stroke-dashoffset="-90" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
+    <circle cx="50" cy="50" r="45" stroke="#eee000" stroke-dashoffset="-60" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
+    <circle cx="50" cy="50" r="45" stroke="#ee8c00" stroke-dashoffset="-30" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
+    <circle cx="50" cy="50" r="45" stroke="#f7003d" stroke-dashoffset="0" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
+    <circle cx="95" cy="70" r="8" fill="white" stroke="#999" stroke-width="2" />
+    
+  </g>
+  <text x="50" y="50" text-anchor="middle" alignment-baseline="middle" font-size="15" fill="black">78</text>
+</svg>

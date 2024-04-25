@@ -2,6 +2,7 @@ import { View, Text,Image,StyleSheet,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Dimensions } from 'react-native';
 import data from '../assets/data/GoodsMainData.json'
+import color from '../components/misc/color';
 // Get the device width and height
 const { width } = Dimensions.get('window');
 
@@ -88,12 +89,13 @@ const Goods = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#999',
+    backgroundColor: color.background,
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   card: {
-    backgroundColor: 'white',
+    backgroundColor: color.card,
+    elevation:3,
     width:'30%',
     height: width * 0.3,
     borderRadius: 8,
@@ -105,7 +107,8 @@ const styles = StyleSheet.create({
   },
   cardText: {
     textAlign: 'center',
-    fontSize:12
+    fontSize:12,
+    fontFamily:'vazir'
     // marginTop:10
   }
 });

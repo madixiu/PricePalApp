@@ -2,30 +2,35 @@
   {
     "Icon": "azadi",
     "GoldCoins": "Azadi",
+    "PersianName":"آزادی",
     "Sell": "29,800,000",
     "Buy": "29,300,000"
   },
   {
     "Icon": "emami",
     "GoldCoins": "Emami",
+    "PersianName":"امامی",
     "Sell": "32,600,000",
     "Buy": "32,000,000"
   },
   {
     "Icon": "azadi",
     "GoldCoins": "Nim Azadi",
+    "PersianName":"نیم سکه",
     "Sell": "18,000,000",
     "Buy": "17,700,000"
   },
   {
     "Icon": "azadi",
     "GoldCoins": "Rob Azadi",
+    "PersianName":"ربع سکه",
     "Sell": "11,100,000",
     "Buy": "10,800,000"
   },
   {
     "Icon": "gerami",
     "GoldCoins": "Gerami",
+    "PersianName":"گرامی",
     "Sell": "5,850,000",
     "Buy": "5,350,000"
   }

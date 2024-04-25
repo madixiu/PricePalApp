@@ -1,4 +1,4 @@
-import { View, Text,Button,Image,StyleSheet } from 'react-native'
+import { View, Text,Button,Image,StyleSheet,ScrollView } from 'react-native'
 import React from 'react'
 
 import { itemDataOptimizer } from '../misc/dataOptimizer';
@@ -32,7 +32,7 @@ const CryptoItemDetail = ({navigation,route}) => {
       // <Text>{route.params?.data.last_updated }</Text>
 
 
-      <View style={{backgroundColor:"#999", flex:1}}>
+      <ScrollView style={{backgroundColor:"#999"}}>
 
           {/*// Price Card */}
         <View style={styles.container}>
@@ -136,7 +136,7 @@ const CryptoItemDetail = ({navigation,route}) => {
                 color="#841584"
                 accessibilityLabel="Learn more about this purple button"
               />
-          </View>
+          </ScrollView>
   )
 }
 

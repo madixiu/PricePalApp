@@ -3,6 +3,7 @@ import React from "react";
 import AssetItem from "../components/Assets/AssetItem";
 import CurrencyData from "../assets/data/Assetdata.json";
 import AssetsHeaderComponent from "../components/Assets/AssetsHeaderComponent";
+import color from "../components/misc/color";
 /**
  *
  * Assets component renders a list of currency exchange rates.
@@ -72,7 +73,7 @@ function Assets() {
         renderItem={({ item }) => (
           <AssetItem
             Code={item.Code}
-            Currency={item.Currency}
+            Name={item.PersianName}
             Buy={item.Buy}
             Sell={item.Sell}
             ImgURL={getImageUrl(item.Code)}
@@ -93,7 +94,7 @@ function Assets() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#999",
+    backgroundColor: color.background,
   },
   flatList: {
     flex: 1,

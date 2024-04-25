@@ -2,14 +2,15 @@ import { View, Text, TouchableHighlight, Image } from "react-native";
 
 import React from "react";
 import { priceOptimizer } from "../misc/numberOptimizer";
+import color from "../misc/color";
 
 const AssetItem = (props) => {
-  const { ImgURL, Code, Currency, Buy, Sell } = props;
+  const { ImgURL, Code, Name, Buy, Sell } = props;
 
   return (
     <TouchableHighlight
       activeOpacity={0.6}
-      underlayColor="#999"
+      underlayColor={color.background}
       onPress={() => {}}
     >
       <View style={styles.container}>
@@ -22,7 +23,7 @@ const AssetItem = (props) => {
         </View>
 
         <View style={styles.currencyView}>
-          <Text style={styles.text}>{Currency}</Text>
+          <Text style={styles.text}>{Name}</Text>
         </View>
 
         <View style={styles.priceView}>
@@ -40,7 +41,7 @@ const AssetItem = (props) => {
 const styles = {
   container: {
     flexDirection: "row",
-    backgroundColor: "rgb(200, 200, 200)",
+    backgroundColor: color.card,
     elevation: 3,
     marginHorizontal:3,
     marginVertical:2,
@@ -50,6 +51,7 @@ const styles = {
   },
 
   iconView: {
+    flex: 1,
     alignItems: "center",
     flexDirection:'row',
   },
@@ -68,11 +70,12 @@ const styles = {
   },
 
   text: {
-    fontSize: 12,
+    fontSize: 13,
+    fontFamily: "vazir",
   },
   assetSymbolText: {
     fontSize: 10,
-    color: "#666",
+    color: color.text_secondary,
   },
   priceText: {
     fontSize:13,
