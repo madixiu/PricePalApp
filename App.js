@@ -32,7 +32,7 @@ function TopTabs({ state, descriptors, navigation }) {
   // I18nManager.forceRTL(true)
   I18nManager.allowRTL(true);
   return (
-    <View style={{backgroundColor:'gainsboro',flexDirection: 'row-reverse',justifyContent:'center',paddingVertical:5,layoutDirection:'rtl'}}>
+    <View style={{backgroundColor:colors.background,flexDirection: 'row-reverse',justifyContent:'center',paddingVertical:5}}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -45,7 +45,7 @@ function TopTabs({ state, descriptors, navigation }) {
         const isFocused = state.index === index;
         return (
           <TouchableOpacity
-            style={{flex:1,alignItems: 'center',flexDirection: 'row',justifyContent:'center',backgroundColor: isFocused ? colors.card : '#eee',borderRadius:5,paddingVertical:3,marginHorizontal:10}}
+            style={{flex:1,alignItems: 'center',flexDirection: 'row',justifyContent:'center',backgroundColor: isFocused ? colors.card : colors.background,elevation:2,borderRadius:5,paddingVertical:3,marginHorizontal:10}}
             key={route.key}
             onPress={() => navigation.navigate(route.name)}
           > 
@@ -65,15 +65,16 @@ function TopTabs({ state, descriptors, navigation }) {
 const AssetsTab = createMaterialTopTabNavigator();
 
 function AssetsTabs() {
-  I18nManager.allowRTL(true);
 
-  // I18nManager.swapLeftAndRightInRTL(true);
 
   return (
     <AssetsTab.Navigator  style={{layoutDirection:'rtl'}}
     // initialRouteName="Coins"
     initialRouteName="Assets"
+
     tabBar={props => <TopTabs {...props} />}
+
+
     >
       <AssetsTab.Screen name="Coins" component={Coins} />
       <AssetsTab.Screen name="Assets" component={Assets} />
@@ -86,7 +87,6 @@ export default function App() {
     "vazir": require("./assets/fonts/Vazirmatn-FD-Regular.ttf"),
   });
 
-  // I18nManager.forceRTL(true);
   I18nManager.allowRTL(true);
   // I18nManager.swapLeftAndRightInRTL(true);
 
@@ -102,12 +102,7 @@ export default function App() {
           component={AssetsTabs}
           options={{
             headerTitle: (props) => <LogoTitle {...props} />,
-            
-            headerRight: () => (
-              <TouchableOpacity>
-                <Text>Button</Text>
-              </TouchableOpacity>
-            ),
+                      
             tabBarLabel: "ارز و سکه",
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: color.primary,
@@ -130,9 +125,7 @@ export default function App() {
           name="Crypto"
           component={Crypto}
           options={{
-            // headerShown:false,
-            // headerTitle: (props) => <LogoTitle {...props} />,
-
+            headerShown:false,
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: colors.primary,
             tabBarInactiveTintColor: "#999",
@@ -142,6 +135,7 @@ export default function App() {
               fontFamily:'vazir',
             },
             tabBarIcon: ({ focused, color, size }) => (
+              
               <FontAwesome5
                 name={"bitcoin"}
                 color={focused ? colors.primary : "#999"}

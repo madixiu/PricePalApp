@@ -31,7 +31,7 @@ export default function CryptoComponent(props) {
   }
 async function getData() {
   try {
-    const response = await fetch('https://api.alternative.me/v2/ticker/?limit=30');
+    const response = await fetch('https://api.alternative.me/v2/ticker/?limit=50');
     const data = await response.json();
     let dataOPed = listingDataOptimizer(data.data);
     setCryptoList(dataOPed);
