@@ -21,7 +21,19 @@ export function listingDataOptimizer(data) {
         item.percent_change_7d=twoDigitTruncator(item.percent_change_7d)
         delete item["quotes"]
       }
+      // dataEl = filterArray(dataEl,filter)
       return dataEl
+}
+export function filterArray(array, filter) {
+  switch (filter) {
+    case '100':
+      return array.slice(0, 100);
+    case '200':
+      return array.slice(0, 200);
+    case '300':
+    default:
+      return array;
+  }
 }
 export function itemDataOptimizer(data) {
   // data.price = priceOptimizer(data.price);

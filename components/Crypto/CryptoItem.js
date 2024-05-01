@@ -6,8 +6,9 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
-import { percent_text_color } from "../misc/dynamicStyles";
+import { caret_color, percent_text_color } from "../misc/dynamicStyles";
 import color from "../misc/color";
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const onItemClick = (data, navigation) => {
   navigation.navigate('CryptoItemDetail',{data: data})
@@ -30,7 +31,16 @@ const CryptoItem = (props) => {
     max_supply: props.max_supply,
     last_updated: props.last_updated,
   };
-
+ 
+  // arrow function that calculates the change based on a filter 
+  function changeCalculator () {
+    if (props.FilterChange == 'ساعتی')
+    return props.change1h;
+    else if (props.FilterChange == 'هفتگی')
+    return props.change7d
+    else
+    return props.change24h;
+  }
   return (
     <TouchableHighlight
       activeOpacity={0.6}
@@ -68,6 +78,14 @@ const CryptoItem = (props) => {
         </View>
 
         <View style={styles.ChangeViewStyle}>
+            <Text style={[
+                styles.changeTextStyling,
+                percent_text_color(changeCalculator()),
+              ]}>{Math.abs(changeCalculator())}%</Text>
+          {(changeCalculator() < 0 || changeCalculator() > 0)? (<FontAwesome5 style={{marginLeft:3}} name={props.change1h < 0 ? "caret-down" : "caret-up"} 
+          size={12} color={caret_color(props.change1h)}  />) : null}
+        </View>
+        {/* <View style={styles.ChangeViewStyle}>
           <View style={styles.ChangeSubViewStyle}>
             <Text
               style={[
@@ -109,7 +127,7 @@ const CryptoItem = (props) => {
               7D
             </Text>
           </View>
-        </View>
+        </View> */}
       </View>
     </TouchableHighlight>
   );
@@ -118,7 +136,7 @@ const CryptoItem = (props) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: color.card,
-    elevation: 3,
+    elevation: 1,
     // marginBottom: 3,
     // marginTop: 1,
     marginHorizontal:3,
@@ -133,7 +151,7 @@ const styles = StyleSheet.create({
   },
   nameTextStyling: {
     fontSize: 9,
-    color: "#666",
+    color: color.text_secondary,
   },
   rankTextStyling: {
     fontSize: 7,
@@ -151,7 +169,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   changeTextStyling: {
-    fontSize: 11,
+    fontSize: 12,
   },
   IconViewStyle: {
     flex: 1,
@@ -166,9 +184,11 @@ const styles = StyleSheet.create({
   },
   ChangeViewStyle: {
     flex: 1,
+    flexDirection:'row',
     justifyContent: "flex-end",
-    paddingTop: 5,
-    paddingBottom: 5,
+    alignItems:'center',
+   paddingVertical:15,
+   paddingHorizontal:5
   },
   ChangeSubViewStyle: {
     flexDirection: "row",

@@ -4,6 +4,7 @@ export default {
   background: '#fcfdff',
   primary: '#6200ff',
   card: '#fff',
+  card_alternative:'#edf1f5',
   // secondary: '#f1c40f',
   text: '#000',
   text_secondary: '#646a84',

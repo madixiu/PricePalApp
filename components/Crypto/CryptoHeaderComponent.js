@@ -4,13 +4,13 @@ const CryptoHeaderComponent = () => {
   return (
     <View style={styles.container}>
       <View style={{flex:1,justifyContent:'center',alignItems:'flex-start',marginLeft:5}}>
-        <Text style={{flex:1,fontSize:14,fontWeight:'bold'}}>کوین</Text>
+        <Text style={{fontFamily:'vazir',fontSize:12}}>کوین</Text>
       </View>
       <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-        <Text style={{fontSize:14,fontWeight:'bold'}}>قیمت</Text>
+        <Text style={{fontFamily:'vazir',fontSize:12}}>قیمت</Text>
       </View>
       <View style={{flex:1,justifyContent:'center',alignItems:'flex-end',marginRight:5}}>
-        <Text style={{fontSize:14,fontWeight:'bold',}}>تغییرات</Text>
+        <Text style={{fontFamily:'vazir',fontSize:12}}>تغییرات</Text>
       </View>
     </View>
   )

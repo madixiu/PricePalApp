@@ -14,7 +14,7 @@ function backBotton(navigation){
 
 const CryptoItemDetail = ({navigation,route}) => {
   const data = itemDataOptimizer(route.params?.data) 
-
+  // console.log(data);
   return (
     // <View style={{flex:1,backgroundColor:'#999'}}>
       // <Text>{route.params?.data.symbol}</Text>
