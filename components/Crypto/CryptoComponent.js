@@ -1,7 +1,7 @@
 // import axios from 'axios';
 import React,{useState,useEffect} from 'react'
 import {View,Text,StyleSheet,FlatList,RefreshControl, TouchableHighlight,Modal,TouchableOpacity} from 'react-native'
-import { filterArray, listingDataOptimizer } from '../misc/dataOptimizer';
+import { OverviewDataOptimizer, filterArray, listingDataOptimizer } from '../misc/dataOptimizer';
 import CryptoItem from './CryptoItem';
 import CryptoHeaderComponent from './CryptoHeaderComponent';
 import LoadingSpinner from '../LoadingSpinner';
@@ -38,6 +38,9 @@ function FilteringComponent({ Currency, setCurrency,modalTopVisible,setModalTopV
   );
 }
 export default function CryptoComponent(props) {
+
+  const [fngData,setFngData] = useState(0);
+  const [CryptoOverviewData,setCryptoOverviewData] = useState({});
   const [CryptoList, setCryptoList] = useState([]);
   const [FilteredCryptoList, setFilteredCryptoList] = useState([]);
   const [Refreshing, setRefreshing] = useState(false);
@@ -98,6 +101,31 @@ async function getData() {
     setCryptoList(null);
   }
 }
+async function getOverviewData() {
+  try {
+    const response = await fetch('https://api.alternative.me/v2/global/');
+    var data = await response.json();
+    data = OverviewDataOptimizer(data);
+    setCryptoOverviewData(data);
+    console.log(CryptoOverviewData);
+  } catch (err) {
+    // console.log(data);
+    setLoading(false);
+    setError(true);
+    // setCryptoList(null);
+  }
+}
+async function getFearAndGreedData() {
+  try {
+    const response = await fetch('https://api.alternative.me/fng/');
+    var data = await response.json();
+    let value = parseInt(data.data[0].value);
+    setFngData(value);
+  } catch (error) {
+    setLoading(false);
+    setError(true);
+  }
+}
 
 //? Axios call disabled for now!
   // function getData() {
@@ -115,6 +143,8 @@ async function getData() {
 
   useEffect(() => {
       getData();
+      getOverviewData();
+      getFearAndGreedData();
   }, []);
 
   if (loading) 
@@ -136,7 +166,7 @@ async function getData() {
   else 
   return (
     <View style={{flex:1,backgroundColor:color.background}}>
-      <CryptoOverviewWidget />
+      <CryptoOverviewWidget data={CryptoOverviewData} fngData={fngData} />
       <FilteringComponent Currency={Currency} setCurrency={setCurrency} modalTopVisible={modalTopVisible} setModalTopVisible={setModalTopVisible} FilterTop={FilterTop} setFilterTop={setFilterTop} FilterChange={FilterChange} setModalChangeVisible={setModalChangeVisible} />  
       <CryptoHeaderComponent />
         <View style={styles.listView}>

@@ -4,38 +4,58 @@ import { View, Text ,StyleSheet,Image} from 'react-native';
 import color from '../misc/color';
 import {FontAwesome5} from '@expo/vector-icons';
 
-// import { SvgXml } from 'react-native-svg';
+import { SvgXml } from 'react-native-svg';
 
-// const MyComponent = (
-// ) => {
-//   const svgContent = `
-//   <svg viewBox="0 0 100 100" width="50" height="50" >
-//   <g transform="rotate(0 50 50)" fill="none" stroke-width="10">
-//     <circle cx="50" cy="50" r="45" stroke="#00d680" stroke-dashoffset="-120" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
-//     <circle cx="50" cy="50" r="45" stroke="#6fed00" stroke-dashoffset="-90" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
-//     <circle cx="50" cy="50" r="45" stroke="#eee000" stroke-dashoffset="-60" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
-//     <circle cx="50" cy="50" r="45" stroke="#ee8c00" stroke-dashoffset="-30" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
-//     <circle cx="50" cy="50" r="45" stroke="#f7003d" stroke-dashoffset="0" stroke-dasharray="30 200" pathLength="200" stroke-linejoin="round" />
-//     <circle cx="95" cy="70" r="8" fill="white" stroke="#999" stroke-width="2" />
+
+
+export default function CryptoOverviewWidget({data,fngData}) {
+
+  const dominance = (data) => {
+    let dominance = (data.bitcoin_percentage_of_market_cap * 100).toFixed(2);
+    return dominance;
+  }
+  const volume_24h = (data) => {
+    let volume_24h = (data.total_volume_24h /1000000000).toFixed(2);
+    return volume_24h;
+  }
+  const market_cap = (data) => {
+    let market_cap = (data.total_market_cap /1000000000000).toFixed(2);
+    return market_cap;
+  }
+
+  function indicator(fngData) {
+    console.log(fngData);
+    let ind = ((fngData * 166) / 100) + 17;
+    console.log(ind);
+    return ind.toString();
+  }
+  // var indicator = '17';
+  function SvgComponent ({indicator}) {
+    const svgContent = `
+    <svg viewBox="0 15 200 50"
+  xmlns="http://www.w3.org/2000/svg">
+    <!-- Draw the bar with five colors -->
+    <rect x="0" y="25" width="40" height="30" fill="#f7003d"/>
+    <rect x="40" y="25" width="40" height="30" fill="#ee8c00"/>
+    <rect x="80" y="25" width="40" height="30" fill="#eee000"/>
+    <rect x="120" y="25" width="40" height="30" fill="#6fed00"/>
+    <rect x="160" y="25" width="40" height="30" fill="#00d680"/>
     
-//   </g>
-//   <text x="50" y="50" text-anchor="middle" alignment-baseline="middle" font-size="15" fill="black">78</text>
-// </svg>
-// `;
-
-//   return <SvgXml xml={svgContent} />;
-// };
-
-
-export default function CryptoOverviewWidget() {
-
+    <!-- Draw the circle as an indicator -->
+    <circle id="indicator" cx="${indicator(fngData)}" cy="40" r="13" fill="#aaaa" stroke="#666" stroke-width="7"/>
+  </svg>
+  
+  `;
+  
+    return <SvgXml xml={svgContent} style={{width:75,height:20,flex:1,flexWrap:'wrap'}} />;
+  };
  
     return (
       <View style={styles.container}>
 
           <View style={[styles.box,{borderBottomStartRadius:10,borderTopStartRadius:10}]}>
-            <Text style={styles.label}>Market Cap</Text>
-            <Text style={styles.value}>$2.28 T</Text>
+            <Text style={styles.label}>ارزش کل بازار</Text>
+            <Text style={styles.value}>${market_cap(data)} T</Text>
             <View style={{flexDirection:'row', justifyContent: 'sapce-between',alignItems:'center'}}>
               <Text style={styles.change}>9.82%</Text>
               <FontAwesome5 name="caret-down" size={12} color="red" />
@@ -43,16 +63,16 @@ export default function CryptoOverviewWidget() {
 
           </View>
           <View style={styles.box}>
-            <Text style={styles.label}>Volume</Text>
-            <Text style={styles.value}>$116.17 B</Text>
+            <Text style={styles.label}>حجم روزانه</Text>
+            <Text style={styles.value}>${volume_24h(data)} B</Text>
             <View style={{flexDirection:'row', justifyContent: 'sapce-between',alignItems:'center'}}>
               <Text style={styles.change}>24.21%</Text>
               <FontAwesome5 name="caret-down" size={12} color="red" />
             </View>
           </View>
           <View style={styles.box}>
-            <Text style={styles.label}>Dominance</Text>
-            <Text style={styles.value}>54.13%</Text>
+            <Text style={styles.label}>دامیننس</Text>
+            <Text style={styles.value}>{dominance(data)}%</Text>
             <View style={{flexDirection:'row',justifyContent: 'center',alignItems:'center'}}>
             <Text style={styles.dominance}>BTC</Text>
             <Image
@@ -66,8 +86,11 @@ export default function CryptoOverviewWidget() {
           </View>
           </View>
           <View style={[styles.box,{borderBottomEndRadius:10,borderTopEndRadius:10}]}>
-            <Text style={styles.label}>Fear & Greed</Text>
-          
+            <Text style={styles.label}>ترس و طمع</Text>
+            <View style={{justifyContent: 'center',alignItems:'center'}}>
+              <Text style={{fontSize:12,fontWeight:'bold'}}>{fngData}</Text>
+              <SvgComponent style={{backgroundColor:'red'}} indicator={indicator} />
+            </View>
           </View>
       </View>
     );
@@ -85,7 +108,8 @@ const styles = StyleSheet.create({
   },
   box: {
     flex:1,
-    // minHeight:60,
+    minHeight:60,
+    // maxHeight:60,
     // height:'auto',
     elevation:2,
     backgroundColor:'white',
@@ -95,6 +119,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 1,
   },
   label: {
+    fontFamily:'vazir',
     fontSize:10,
     color:'gray'
   },

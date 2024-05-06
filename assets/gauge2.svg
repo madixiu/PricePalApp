@@ -1,0 +1,12 @@
+<svg viewBox="-10 0 200 100"
+xmlns="http://www.w3.org/2000/svg">
+  <!-- Draw the bar with five colors -->
+  <rect x="10" y="50" width="30" height="20" fill="#f7003d"/>
+  <rect x="40" y="50" width="30" height="20" fill="#ee8c00"/>
+  <rect x="70" y="50" width="30" height="20" fill="#eee000"/>
+  <rect x="100" y="50" width="30" height="20" fill="#6fed00"/>
+  <rect x="130" y="50" width="30" height="20" fill="#00d680"/>
+  
+  <!-- Draw the circle as an indicator -->
+  <circle id="indicator" cx="150" cy="60" r="10" fill="gray" stroke="white" stroke-width="2"/>
+</svg>

@@ -24,6 +24,14 @@ export function listingDataOptimizer(data) {
       // dataEl = filterArray(dataEl,filter)
       return dataEl
 }
+export function OverviewDataOptimizer(inputData) {
+  let data = {}
+  data.bitcoin_percentage_of_market_cap = inputData.data.bitcoin_percentage_of_market_cap;
+  data.total_market_cap = inputData.data.quotes.USD.total_market_cap;
+  data.total_volume_24h = inputData.data.quotes.USD.total_volume_24h;
+  data.last_updated = inputData.data.last_updated;
+  return data
+}
 export function filterArray(array, filter) {
   switch (filter) {
     case '100':
