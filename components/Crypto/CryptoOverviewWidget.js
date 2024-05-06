@@ -24,9 +24,7 @@ export default function CryptoOverviewWidget({data,fngData}) {
   }
 
   function indicator(fngData) {
-    console.log(fngData);
     let ind = ((fngData * 166) / 100) + 17;
-    console.log(ind);
     return ind.toString();
   }
   // var indicator = '17';

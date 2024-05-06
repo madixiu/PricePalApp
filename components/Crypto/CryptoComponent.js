@@ -107,7 +107,6 @@ async function getOverviewData() {
     var data = await response.json();
     data = OverviewDataOptimizer(data);
     setCryptoOverviewData(data);
-    console.log(CryptoOverviewData);
   } catch (err) {
     // console.log(data);
     setLoading(false);
