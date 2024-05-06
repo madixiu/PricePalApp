@@ -1,4 +1,7 @@
 
+
+import color from "./color"
+
 export function percent_text_color(input) {
 
     if (input > 0)
@@ -17,9 +20,9 @@ export function caret_color(input) {
 }
 export function chip_color(input) {
     if (input > 0)
-    return {backgroundColor: 'green'} 
+    return {backgroundColor: color.gauge.green} 
     else if (input < 0)
-    return {backgroundColor: 'red'}
+    return {backgroundColor: color.gauge.red}
     else
     return {backgroundColor: 'gray'}
 }

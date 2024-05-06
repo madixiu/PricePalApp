@@ -4,7 +4,7 @@ import { Dimensions,View,Text } from 'react-native';
 import { LineChart } from "react-native-chart-kit";
 import BTCdata from '../../../assets/data/mockBTC7Ddata.json'
 import { getDayText } from '../../../components/misc/dateOptimizer'
-
+import color from '../../misc/color';
 
 const  btcDataOptimizer = (BTCdata) => {
   let data = {price:[],timestamp:[]}
@@ -87,9 +87,9 @@ function LineChartComponent () {
       // yAxisSuffix="k"
       yAxisInterval={1} // optional, defaults to 1
       chartConfig={{
-        backgroundColor: "#c8c8c8",
-        backgroundGradientFrom: "#c8c8c8",
-        backgroundGradientTo: "#c8c8c8",
+        backgroundColor: color.card,
+        backgroundGradientFrom: color.card,
+        backgroundGradientTo: color.card,
         decimalPlaces: 2, // optional, defaults to 2dp
         color: (opacity = 1) => `rgba(3, 3, 3, ${opacity})`,
         labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,

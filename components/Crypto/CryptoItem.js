@@ -82,8 +82,8 @@ const CryptoItem = (props) => {
                 styles.changeTextStyling,
                 percent_text_color(changeCalculator()),
               ]}>{Math.abs(changeCalculator())}%</Text>
-          {(changeCalculator() < 0 || changeCalculator() > 0)? (<FontAwesome5 style={{marginLeft:3}} name={props.change1h < 0 ? "caret-down" : "caret-up"} 
-          size={12} color={caret_color(props.change1h)}  />) : null}
+          {(changeCalculator() < 0 || changeCalculator() > 0)? (<FontAwesome5 style={{marginLeft:3}} name={changeCalculator() < 0 ? "caret-down" : "caret-up"} 
+          size={12} color={caret_color(changeCalculator())}  />) : null}
         </View>
         {/* <View style={styles.ChangeViewStyle}>
           <View style={styles.ChangeSubViewStyle}>

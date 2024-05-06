@@ -21,15 +21,18 @@ export const getDayText = (day) => {
 }
 export function unixToDate(unix) {
 
+  const utcOffset = -new Date().getTimezoneOffset();
+  const localOffsetDifference = 210 - utcOffset;
+  const adjustedMilliseconds = unix * 1000 + localOffsetDifference * 60 * 1000;
+  const date = new Date(adjustedMilliseconds);
 
-  const date = new Date(unix * 1000);
-  // const year = date.getFullYear();
-  // const month = date.getMonth() + 1;
-  // const day = date.getDate();
-  const hour = date.getHours();
+  var hour = date.getHours();
   var minute = date.getMinutes();
   if (minute < 10) {
     minute = `0${minute}`;
+  }
+  if (hour < 10) {
+    hour = `0${hour}`;
   }
   // const second = date.getSeconds();
 

@@ -17,13 +17,21 @@ const colors = color;
 
 
 const LogoTitle = (props) => {
+
+  const title = (OT) => {
+    if (OT == 'AssetCoins')
+      return 'ارز و سکه'
+    else if (OT == 'Goods')
+      return 'سوپرماکرت'
+    return OT
+  }
   return (
     <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-      <Image
+      {/* <Image
         source={require("./assets/logo.png")}
-        style={{ width: 32,height: 32}}
-        />
-        <Text>{props.children}</Text>
+        style={{ width: 32,height: 32,marginRight:8}}
+        /> */}
+        <Text style={{fontFamily:'vazir',fontSize:17}}>{title(props.children)}</Text>
       </View>
   )
 }
@@ -101,9 +109,16 @@ export default function App() {
           name="AssetCoins"
           component={AssetsTabs}
           options={{
-            headerTitle: (props) => <LogoTitle {...props} />,
-                      
+            headerTitle: (props) => <LogoTitle {...props}/>,
+            headerTitleAlign:'center',
+            headerLeft: () => (
+              <Image
+              source={require("./assets/logo.png")}
+              style={{ width: 32,height: 32,marginLeft:8}}
+              />
+            ),
             tabBarLabel: "ارز و سکه",
+            
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: color.primary,
             tabBarInactiveTintColor: "#999",
@@ -150,7 +165,13 @@ export default function App() {
           component={Goods}
           options={{
             headerTitle: (props) => <LogoTitle {...props} />,
-
+            headerTitleAlign:'center',
+            headerLeft: () => (
+              <Image
+              source={require("./assets/logo.png")}
+              style={{ width: 32,height: 32,marginLeft:8}}
+              />
+            ),
             tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: color.primary,
             tabBarInactiveTintColor: "#999",
