@@ -35,7 +35,6 @@ const Coins = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "#999",
     backgroundColor: color.background
   },
   flatList: {

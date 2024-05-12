@@ -96,7 +96,7 @@ export default function App() {
   });
 
   I18nManager.allowRTL(true);
-  // I18nManager.swapLeftAndRightInRTL(true);
+
 
   if (!fontsLoaded) {
     return <Text>Loading...</Text>;

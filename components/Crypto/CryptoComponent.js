@@ -148,9 +148,6 @@ async function getFearAndGreedData() {
 
   if (loading) 
   return (
-  // <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
-  //   <Text>Loading...</Text>  
-  // </View>
   <LoadingSpinner />
   )
   else if (error)
@@ -158,7 +155,7 @@ async function getFearAndGreedData() {
     <View style={{alignItems: 'center',flex:1,justifyContent: 'center',backgroundColor: '#999'}}>
       
       <TouchableHighlight style={{borderWidth:2,borderColor:'white',padding:10,borderRadius:8}} onPress={() => errorHandler()}>
-        <Text style={{color:'white'}}>Try Again!</Text>
+        <Text style={{color:'white',fontFamily:'vazir'}}>تلاش دوباره!</Text>
       </TouchableHighlight>  
     </View>
   )
