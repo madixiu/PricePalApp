@@ -78,12 +78,12 @@ const CryptoItem = (props) => {
         </View>
 
         <View style={styles.ChangeViewStyle}>
+          {(changeCalculator() < 0 || changeCalculator() > 0)? (<FontAwesome5 style={{marginRight:3}} name={changeCalculator() < 0 ? "caret-down" : "caret-up"} 
+          size={15} color={caret_color(changeCalculator())}  />) : null}
             <Text style={[
                 styles.changeTextStyling,
                 percent_text_color(changeCalculator()),
               ]}>{Math.abs(changeCalculator())}%</Text>
-          {(changeCalculator() < 0 || changeCalculator() > 0)? (<FontAwesome5 style={{marginLeft:3}} name={changeCalculator() < 0 ? "caret-down" : "caret-up"} 
-          size={15} color={caret_color(changeCalculator())}  />) : null}
         </View>
         {/* <View style={styles.ChangeViewStyle}>
           <View style={styles.ChangeSubViewStyle}>
@@ -155,12 +155,12 @@ const styles = StyleSheet.create({
     color: color.text_secondary,
   },
   rankTextStyling: {
-    fontSize: 7,
+    fontSize: 8,
     color: "#333",
-    fontWeight:'500'
+    fontWeight:'600'
   },
   rankTextView: {
-    backgroundColor: "#aaaa",
+    backgroundColor: "#ddd",
     borderRadius: 2,
     padding: 2,
     paddingHorizontal: 5,
@@ -172,7 +172,8 @@ const styles = StyleSheet.create({
   },
   changeTextStyling: {
     fontSize: 12,
-    fontWeight:'700'
+    fontWeight:'700',
+    marginRight:10
   },
   IconViewStyle: {
     flex: 1,
@@ -191,7 +192,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems:'center',
    paddingVertical:15,
-   paddingHorizontal:5
+  //  paddingHorizontal:0,
+  //  marginRight:10,
   },
   ChangeSubViewStyle: {
     flexDirection: "row",

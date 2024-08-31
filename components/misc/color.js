@@ -2,7 +2,8 @@
 // colors.js
 export default {
   background: '#fcfdff',
-  primary: '#6200ff',
+  primary: '#0f1d42',
+  secondary: '#646a84',
   card: '#fff',
   card_alternative:'#edf1f5',
   // secondary: '#f1c40f',

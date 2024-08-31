@@ -11,6 +11,7 @@ import Coins from "./pages/Coins";
 import Goods from "./pages/Goods";
 import { Ionicons } from "@expo/vector-icons";
 import {FontAwesome5} from '@expo/vector-icons';
+import { Colors } from "react-native/Libraries/NewAppScreen";
 const Tab = createBottomTabNavigator();
 
 const colors = color;
@@ -119,9 +120,8 @@ export default function App() {
             ),
             tabBarLabel: "ارز و سکه",
             
-            tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: color.primary,
-            tabBarInactiveTintColor: "#999",
+            tabBarInactiveTintColor: color.secondary,
             tabBarLabelStyle:{
               fontSize:11,
               fontFamily:'vazir',
@@ -129,7 +129,7 @@ export default function App() {
             tabBarIcon: ({ focused, color, size }) => (
               <FontAwesome5
                 name={"coins"}
-                color={focused ? colors.primary : "#999"}
+                color={focused ? colors.primary : colors.secondary}
                 size={24}
               />
             ),
@@ -141,9 +141,8 @@ export default function App() {
           component={Crypto}
           options={{
             headerShown:false,
-            tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: colors.primary,
-            tabBarInactiveTintColor: "#999",
+            tabBarInactiveTintColor: color.secondary,
             tabBarLabel:"کریپتو",
             tabBarLabelStyle:{
               fontSize:11,
@@ -151,9 +150,12 @@ export default function App() {
             },
             tabBarIcon: ({ focused, color, size }) => (
               
+
+
+              
               <FontAwesome5
                 name={"bitcoin"}
-                color={focused ? colors.primary : "#999"}
+                color={focused ? colors.primary : colors.secondary}
                 size={28}
               />
             ),
@@ -172,9 +174,8 @@ export default function App() {
               style={{ width: 32,height: 32,marginLeft:8}}
               />
             ),
-            tabBarActiveBackgroundColor: "gainsboro",
             tabBarActiveTintColor: color.primary,
-            tabBarInactiveTintColor: "#999",
+            tabBarInactiveTintColor: color.secondary,
             tabBarLabel:"سوپر مارکت",
             tabBarLabelStyle:{
               fontSize:11,
@@ -183,7 +184,7 @@ export default function App() {
             tabBarIcon: ({ focused, color, size }) => (
               <Ionicons
                 name={focused ? "basket" : "basket-outline"}
-                color={focused ? colors.primary : "#999"}
+                color={focused ? colors.primary : colors.secondary}
                 size={32}
               />
             ),
